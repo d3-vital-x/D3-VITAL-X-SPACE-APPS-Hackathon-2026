@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local environment
+.env
+.venv/
+venv/
+
+# OS / Temp
+.DS_Store
+*.tmp
