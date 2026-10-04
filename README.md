@@ -74,7 +74,7 @@ This is **not a medical diagnostic device**. It does not claim cancer detection,
 
 An experimental live pathway can represent a video/frame stream as a numerical matrix and send it through the same public analysis interface for visualization and stress-testing. It is not intended as real-time medical diagnosis, spacecraft control, or physical-damage confirmation.
 
-🧠 Public Architecture & Intelligence Boundary
+## 🧠 Public Architecture & Intelligence Boundary
 
 🔐 Open Interface — Closed Intelligence Core
 
@@ -82,11 +82,11 @@ D³ VITAL-X follows a modular, decoupled architecture designed to separate publi
 
 The core principle is:
 
-«Open Interface — Closed Intelligence Core»
+### 🔐 Open Interface — Closed Intelligence Core
 
 This architecture aims to balance open-source development, transparent interfaces, reproducible validation, and the protection of proprietary computational methods.
 
-🌐 1. Public Repository — Open-Source Layer
+### 🌐 1. Public Repository — Open-Source Layer
 
 The public repository provides the accessible infrastructure for data integration, processing, validation, visualization, and research-oriented analysis.
 
@@ -105,7 +105,7 @@ Publicly exposed components include:
 
 These components are intended to make the public system architecture, data flow, validation logic, and integration contracts inspectable.
 
-🔒 2. Intelligence Service — Protected Computational Core
+### 🔒 2. Intelligence Service — Protected Computational Core
 
 The deeper experimental mathematical models and proprietary feature engines are intended to operate independently of the public software infrastructure.
 
@@ -123,7 +123,7 @@ The public repository does not disclose the internal implementation of protected
 
 Remote execution, authentication, and service availability depend on the actual deployment and configuration of the intelligence backend.
 
-🔄 3. Transparency, Validation & Reproducibility
+### 🔄 3. Transparency, Validation & Reproducibility
 
 The architecture distinguishes between publicly inspectable components and protected computational implementations.
 
@@ -137,7 +137,7 @@ Its design emphasizes:
 
 Reproducing results from a protected remote model may require access to the corresponding model version, configuration, execution metadata, and sufficient computational outputs.
 
-🛡️ 4. Public–Private Architectural Boundary
+### 🛡️ 4. Public–Private Architectural Boundary
 
 Layer| Access Model| Primary Responsibility
 Input adapters and unified schemas| Open source| Data integration and standardization
@@ -152,7 +152,7 @@ Remote intelligence service| Controlled access| Execution of protected component
 
 This separation is an architectural and intellectual-property strategy. It does not imply that all proposed components are fully deployed, independently audited, or scientifically validated.
 
-🚀 5. Architectural Vision
+### 🚀 5. Architectural Vision
 
 D³ VITAL-X aims to establish an extensible, research-oriented intelligence platform in which heterogeneous scientific datasets can be processed through a shared computational interface without imposing identical physical interpretations across domains.
 
