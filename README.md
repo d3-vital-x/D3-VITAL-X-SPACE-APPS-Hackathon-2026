@@ -74,15 +74,91 @@ This is **not a medical diagnostic device**. It does not claim cancer detection,
 
 An experimental live pathway can represent a video/frame stream as a numerical matrix and send it through the same public analysis interface for visualization and stress-testing. It is not intended as real-time medical diagnosis, spacecraft control, or physical-damage confirmation.
 
-## 🧠 Public Architecture & Intelligence Boundary
+🧠 Public Architecture & Intelligence Boundary
 
-The public repository exposes adapters, unified schemas, validation/QC, public feature and metric contracts, analytics interfaces, uncertainty representation, explainability, visualization, export, provenance, and reproducibility utilities.
+🔐 Open Interface — Closed Intelligence Core
 
-The deeper experimental research algorithms are intentionally not exposed as public implementation details, following the project's:
+D³ VITAL-X follows a modular, decoupled architecture designed to separate publicly accessible software infrastructure from protected experimental research algorithms.
 
-> **Open Interface — Closed Intelligence Core**
+The core principle is:
 
-principle.
+«Open Interface — Closed Intelligence Core»
+
+This architecture aims to balance open-source development, transparent interfaces, reproducible validation, and the protection of proprietary computational methods.
+
+🌐 1. Public Repository — Open-Source Layer
+
+The public repository provides the accessible infrastructure for data integration, processing, validation, visualization, and research-oriented analysis.
+
+Publicly exposed components include:
+
+- Input Adapters: Modular interfaces for heterogeneous space-science and biomedical research data.
+- Unified Data Layer: Standardized data structures and interoperability.
+- Feature Engineering Interfaces: Public feature definitions and integration contracts.
+- Analytics Interfaces: Statistical analysis and computational metric interfaces.
+- Validation & QC: Data integrity checks, diagnostic tests, and validation utilities.
+- Visualization & Dashboard: Interactive representations of analytical outputs.
+- Uncertainty & Explainability: Structured uncertainty reporting and interpretable result presentation.
+- Export & Provenance: Reproducible output records, metadata, and data lineage.
+- Live / Demonstration Mode: Experimental pathways for signal visualization and stress-testing.
+- API Client Interface: A modular client interface for potential integration with a remote intelligence service.
+
+These components are intended to make the public system architecture, data flow, validation logic, and integration contracts inspectable.
+
+🔒 2. Intelligence Service — Protected Computational Core
+
+The deeper experimental mathematical models and proprietary feature engines are intended to operate independently of the public software infrastructure.
+
+A dedicated client interface, represented by "blackbox_client.py", is designed to support communication with a separately deployed intelligence service.
+
+The proposed remote-core architecture includes:
+
+- Protected execution of experimental research algorithms.
+- Controlled access through authenticated API interfaces.
+- Separation of public client code from private model implementation.
+- Versioned input and output contracts.
+- Independent deployment and maintenance of the remote computational service.
+
+The public repository does not disclose the internal implementation of protected research algorithms.
+
+Remote execution, authentication, and service availability depend on the actual deployment and configuration of the intelligence backend.
+
+🔄 3. Transparency, Validation & Reproducibility
+
+The architecture distinguishes between publicly inspectable components and protected computational implementations.
+
+Its design emphasizes:
+
+- API Transparency: Documented interfaces, input requirements, output structures, and integration contracts.
+- Data Provenance: Dataset identification, processing metadata, and traceable data lineage.
+- Reproducible Validation: Public testing and validation utilities for accessible components.
+- Independent Integration: Support for external development against documented public interfaces.
+- Scientific Integrity: Clear separation of measured observations, computational indicators, and exploratory hypotheses.
+
+Reproducing results from a protected remote model may require access to the corresponding model version, configuration, execution metadata, and sufficient computational outputs.
+
+🛡️ 4. Public–Private Architectural Boundary
+
+Layer| Access Model| Primary Responsibility
+Input adapters and unified schemas| Open source| Data integration and standardization
+Feature and metric contracts| Public interfaces| Consistent analytical specifications
+Analytics and validation| Open source| Inspectable computation and testing
+Visualization and dashboard| Open source| Result presentation
+Provenance and export| Open source| Data lineage and reproducibility support
+"blackbox_client.py"| Public client interface| Remote service integration
+Experimental mathematical models| Protected implementation| Core research computation
+Proprietary feature engines| Protected implementation| Specialized signal processing
+Remote intelligence service| Controlled access| Execution of protected components
+
+This separation is an architectural and intellectual-property strategy. It does not imply that all proposed components are fully deployed, independently audited, or scientifically validated.
+
+🚀 5. Architectural Vision
+
+D³ VITAL-X aims to establish an extensible, research-oriented intelligence platform in which heterogeneous scientific datasets can be processed through a shared computational interface without imposing identical physical interpretations across domains.
+
+The long-term objective is to combine open engineering infrastructure, transparent validation, and protected experimental intelligence while maintaining domain-specific scientific interpretation and human oversight.
+
+«Open Interfaces. Transparent Validation. Protected Intelligence. Reproducible Science.»
 
 ## 🧪 Claim Classification
 
