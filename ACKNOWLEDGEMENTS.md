@@ -264,6 +264,16 @@ laboratory, or institutional NASA research group.
 
 ------------------------------------------------------------------------
 
+## 🏆 Prior NASA Space Apps Record & Provenance
+
+Team D³ VITAL-X previously participated in the NASA International Space Apps Challenge 2025 (Dhaka Local Event, Challenge: "Embiggen Your Eyes!"), receiving official recognition as a "Galactic Problem Solver". This foundational experience directly inspired the multi-domain signal-analysis architecture established in the 2026 platform.
+
+Selected Record:
+- Official Galactic Problem Solver Certificate (2025):
+  https://drive.google.com/file/d/1a3pSgqgcOkntBYXfeUcLAL0X5C_LH2IN/view?usp=drivesdk
+
+------------------------------------------------------------------------
+
 ## 🚀 NASA Space Apps Challenge 2026
 
 The D³ VITAL-X Space Intelligence Platform is being developed for the
