@@ -288,7 +288,8 @@ See [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) for the complete acknowledgemen
 
 **Independent Research & Computational Science Initiative**  
 
-***Transform the World, Illusion the Future***
+***"Transform the World, Illuminate the Future"***
+
 ***"Driven by Logic, Not by Degree"***
 
 **NASA Space Apps Challenge 2026 — Independent Research Prototype**
