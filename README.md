@@ -105,6 +105,11 @@ Publicly exposed components include:
 
 These components are intended to make the public system architecture, data flow, validation logic, and integration contracts inspectable.
 
+> 📝 **Note for Evaluators:**
+> To support efficient demonstration and protect proprietary research formulations, the public repository exposes the complete open interface, input adapters, data-engineering layers, public analytics pipelines, and validation framework. The platform architecture comprises **30 logical components**, including the protected intelligence core, while the corresponding proprietary implementation is not distributed in the public repository.
+>
+> Computationally intensive experimental operations may run independently through the protected service interface represented by `blackbox_client.py`. The public interface is designed to preserve documented input/output contracts, provenance, validation, and reproducibility of the accessible components without exposing proprietary core formulations.
+
 ### 🔒 2. Intelligence Service — Protected Computational Core
 
 The deeper experimental mathematical models and proprietary feature engines are intended to operate independently of the public software infrastructure.
