@@ -277,46 +277,46 @@ D3-VITAL-X-TEST/
 
 The platform is organized into 30 logical components.
 
-## 🟦 Core / Hackathon Production Candidate — 21 Components
+### 🟦 Core / Hackathon Production Candidate — 21 Components
 
-No.| Component| Role
-`|:---|:---|:---|`
-01| "requirements.txt"| Project dependencies
-02| "config.py"| Configuration, API settings, themes, and global constants
-03| "data_schema.py"| Universal data schema and standardized structures
-04| "qc_engine.py"| Data validation, integrity checks, hashing, and QC flags
-05| "csv_adapter.py"| Generic CSV and time-series input adapter
-06| "image_adapter.py"| Scientific image input adapter
-07| "nasa_adapter.py"| NASA / astronomical FITS-data adapter
-08| "dicom_adapter.py"| Biomedical DICOM research-data adapter
-09| "live_adapter.py"| Live video / matrix-stream adapter
-10| "feature_schema.py"| Public feature input/output contract
-11| "engine_interface.py"| Engine interoperability and routing interface
-12| "blackbox_client.py"| Client interface for the protected intelligence service
-13| "entropy_variance.py"| Public entropy, variance, and gradient metrics
-14| "coupling_transition.py"| Coupling and transition indicators
-15| "anomaly_evaluator.py"| C1/C2/C3 classification, anomaly scoring, and uncertainty representation
-16| "result_view.py"| Public visualization and diagnostic result viewer
-17| "export.py"| Result, metadata, and provenance export
-18| "space_page.py"| NASA / Space Intelligence dashboard mode
-19| "biomedical_page.py"| Biomedical Research dashboard mode
-20| "live_page.py"| Live / Demonstration dashboard mode
-21| "app.py"| Main Streamlit dashboard entry point
+No. | Component | Role
+|:---|:---|:---|
+01 | "requirements.txt" | Project dependencies
+02 | "config.py" | Configuration, API settings, themes, and global constants
+03 | "data_schema.py" | Universal data schema and standardized structures
+04 | "qc_engine.py" | Data validation, integrity checks, hashing, and QC flags
+05 | "csv_adapter.py" | Generic CSV and time-series input adapter
+06 | "image_adapter.py" | Scientific image input adapter
+07 | "nasa_adapter.py" | NASA / astronomical FITS-data adapter
+08 | "dicom_adapter.py" | Biomedical DICOM research-data adapter
+09 | "live_adapter.py" | Live video / matrix-stream adapter
+10 | "feature_schema.py" | Public feature input/output contract
+11 | "engine_interface.py" | Engine interoperability and routing interface
+12 | "blackbox_client.py" | Client interface for the protected intelligence service
+13 | "entropy_variance.py" | Public entropy, variance, and gradient metrics
+14 | "coupling_transition.py" | Coupling and transition indicators
+15 | "anomaly_evaluator.py" | C1/C2/C3 classification, anomaly scoring, and uncertainty representation
+16 | "result_view.py" | Public visualization and diagnostic result viewer
+17 | "export.py" | Result, metadata, and provenance export
+18 | "space_page.py" | NASA / Space Intelligence dashboard mode
+19 | "biomedical_page.py" | Biomedical Research dashboard mode
+20 | "live_page.py" | Live / Demonstration dashboard mode
+21 | "app.py" | Main Streamlit dashboard entry point
 
-## 🧪 Validation Extension — 8 Components
+### 🧪 Validation Extension — 8 Components
 
 The validation layer extends the 21-component core with additional research-validation utilities:
 
-No.| Component| Role
-`|:---|:---|:---|`
-22| "validation_runner.py"| Validation orchestration
-23| "bootstrap_report.py"| Bootstrap-based stability and uncertainty reporting
-24| "surrogate_report.py"| Surrogate-data testing and comparison
-25| "noise_resilience.py"| Robustness under controlled noise perturbation
-26| "cross_scale_analysis.py"| Cross-scale consistency analysis
-27| "time_reversal_test.py"| Time-reversal / directional diagnostic testing
-28| "reproducibility.py"| Reproducibility and repeatability checks
-29| "provenance.py"| Extended provenance and processing traceability
+No. | Component | Role
+|:---|:---|:---|
+22 | "validation_runner.py" | Validation orchestration
+23 | "bootstrap_report.py" | Bootstrap-based stability and uncertainty reporting
+24 | "surrogate_report.py" | Surrogate-data testing and comparison
+25 | "noise_resilience.py" | Robustness under controlled noise perturbation
+26 | "cross_scale_analysis.py" | Cross-scale consistency analysis
+27 | "time_reversal_test.py" | Time-reversal / directional diagnostic testing
+28 | "reproducibility.py" | Reproducibility and repeatability checks
+29 | "provenance.py" | Extended provenance and processing traceability
 
 ## 🔐 Protected Intelligence Core — Logical Component 30
 
