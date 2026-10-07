@@ -279,8 +279,8 @@ The platform is organized into 30 logical components.
 
 ## 🟦 Core / Hackathon Production Candidate — 21 Components
 
-```text
 No.| Component| Role
+`|:---|:---|:---|`
 01| "requirements.txt"| Project dependencies
 02| "config.py"| Configuration, API settings, themes, and global constants
 03| "data_schema.py"| Universal data schema and standardized structures
@@ -303,13 +303,12 @@ No.| Component| Role
 20| "live_page.py"| Live / Demonstration dashboard mode
 21| "app.py"| Main Streamlit dashboard entry point
 
-```
 ## 🧪 Validation Extension — 8 Components
 
 The validation layer extends the 21-component core with additional research-validation utilities:
 
-```text
 No.| Component| Role
+`|:---|:---|:---|`
 22| "validation_runner.py"| Validation orchestration
 23| "bootstrap_report.py"| Bootstrap-based stability and uncertainty reporting
 24| "surrogate_report.py"| Surrogate-data testing and comparison
@@ -319,7 +318,6 @@ No.| Component| Role
 28| "reproducibility.py"| Reproducibility and repeatability checks
 29| "provenance.py"| Extended provenance and processing traceability
 
-```
 ## 🔐 Protected Intelligence Core — Logical Component 30
 
 The protected intelligence core is counted as the 30th logical architectural component, but its proprietary implementation is not distributed in the public repository.
