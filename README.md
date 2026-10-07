@@ -245,17 +245,17 @@ D3-VITAL-X-SPACE-APPS-Hackathon-2026/
 │   ├── data_schema.py                       # 03
 │   └── qc_engine.py                         # 04
 │
-├── 05_ENGINE_INTERFACE/
+├── 05_FEATURE_ENGINEERING/
 │   ├── feature_schema.py                    # 10
 │   ├── engine_interface.py                  # 11
 │   └── blackbox_client.py                   # 12
 │
-├── 06_PUBLIC_ANALYTICS/
+├── 06_ANALYTICS/
 │   ├── entropy_variance.py                  # 13
 │   ├── coupling_transition.py               # 14
 │   └── anomaly_evaluator.py                 # 15
 │
-├── 07_PUBLIC_OUTPUT/
+├── 07_VISUALIZATION/
 │   ├── result_view.py                       # 16
 │   └── export.py                            # 17
 │
