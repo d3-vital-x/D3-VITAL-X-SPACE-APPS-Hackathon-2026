@@ -221,6 +221,7 @@ See [`requirements.txt`](requirements.txt) for the maintained dependency set.
 
 The D³ VITAL-X test and hackathon implementation follows a modular architecture separating public data infrastructure, analytics interfaces, validation components, dashboard layers, and the protected intelligence core.
 
+```text
 D3-VITAL-X-TEST/
 │
 ├── requirements.txt                         # 01
