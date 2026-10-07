@@ -219,24 +219,213 @@ See [`requirements.txt`](requirements.txt) for the maintained dependency set.
 
 ## 📁 Repository Architecture
 
-```text
-D³ VITAL-X Space Intelligence Platform
+The D³ VITAL-X test and hackathon implementation follows a modular architecture separating public data infrastructure, analytics interfaces, validation components, dashboard layers, and the protected intelligence core.
+
+D3-VITAL-X-TEST/
 │
-├── Foundation
-├── Input Adapters
-├── Unified Data Layer
-├── Public Analytics Interface
-├── Visualization
-├── NASA / Space Mode
-├── Biomedical Research Mode
-├── Live / Demonstration Mode
-├── Validation
-├── Export
-├── Dashboard
-├── Testing
-├── Colab Demonstrations
-└── Documentation
-```
+├── requirements.txt                         # 01
+│
+├── 02_DASHBOARD/
+│   ├── config.py                            # 02
+│   ├── app.py                               # 21
+│   └── pages/
+│       ├── space_page.py                    # 18
+│       ├── biomedical_page.py               # 19
+│       └── live_page.py                     # 20
+│
+├── 03_INPUT_ADAPTERS/
+│   ├── csv_adapter.py                       # 05
+│   ├── image_adapter.py                     # 06
+│   ├── nasa_adapter.py                      # 07
+│   ├── dicom_adapter.py                     # 08
+│   └── live_adapter.py                      # 09
+│
+├── 04_UNIFIED_DATA/
+│   ├── data_schema.py                       # 03
+│   └── qc_engine.py                         # 04
+│
+├── 05_ENGINE_INTERFACE/
+│   ├── feature_schema.py                    # 10
+│   ├── engine_interface.py                  # 11
+│   └── blackbox_client.py                   # 12
+│
+├── 06_PUBLIC_ANALYTICS/
+│   ├── entropy_variance.py                  # 13
+│   ├── coupling_transition.py               # 14
+│   └── anomaly_evaluator.py                 # 15
+│
+├── 07_PUBLIC_OUTPUT/
+│   ├── result_view.py                       # 16
+│   └── export.py                            # 17
+│
+└── 08_VALIDATION/
+    ├── validation_runner.py                 # 22
+    ├── bootstrap_report.py                  # 23
+    ├── surrogate_report.py                  # 24
+    ├── noise_resilience.py                  # 25
+    ├── cross_scale_analysis.py              # 26
+    ├── time_reversal_test.py                # 27
+    ├── reproducibility.py                   # 28
+    └── provenance.py                        # 29
+
+🔐 Protected Intelligence Core                 # 30
+   Private / non-public implementation
+
+## 🔢 Module Classification
+
+The platform is organized into 30 logical components.
+
+## 🟦 Core / Hackathon Production Candidate — 21 Components
+
+No.| Component| Role
+01| "requirements.txt"| Project dependencies
+02| "config.py"| Configuration, API settings, themes, and global constants
+03| "data_schema.py"| Universal data schema and standardized structures
+04| "qc_engine.py"| Data validation, integrity checks, hashing, and QC flags
+05| "csv_adapter.py"| Generic CSV and time-series input adapter
+06| "image_adapter.py"| Scientific image input adapter
+07| "nasa_adapter.py"| NASA / astronomical FITS-data adapter
+08| "dicom_adapter.py"| Biomedical DICOM research-data adapter
+09| "live_adapter.py"| Live video / matrix-stream adapter
+10| "feature_schema.py"| Public feature input/output contract
+11| "engine_interface.py"| Engine interoperability and routing interface
+12| "blackbox_client.py"| Client interface for the protected intelligence service
+13| "entropy_variance.py"| Public entropy, variance, and gradient metrics
+14| "coupling_transition.py"| Coupling and transition indicators
+15| "anomaly_evaluator.py"| C1/C2/C3 classification, anomaly scoring, and uncertainty representation
+16| "result_view.py"| Public visualization and diagnostic result viewer
+17| "export.py"| Result, metadata, and provenance export
+18| "space_page.py"| NASA / Space Intelligence dashboard mode
+19| "biomedical_page.py"| Biomedical Research dashboard mode
+20| "live_page.py"| Live / Demonstration dashboard mode
+21| "app.py"| Main Streamlit dashboard entry point
+
+## 🧪 Validation Extension — 8 Components
+
+The validation layer extends the 21-component core with additional research-validation utilities:
+
+No.| Component| Role
+22| "validation_runner.py"| Validation orchestration
+23| "bootstrap_report.py"| Bootstrap-based stability and uncertainty reporting
+24| "surrogate_report.py"| Surrogate-data testing and comparison
+25| "noise_resilience.py"| Robustness under controlled noise perturbation
+26| "cross_scale_analysis.py"| Cross-scale consistency analysis
+27| "time_reversal_test.py"| Time-reversal / directional diagnostic testing
+28| "reproducibility.py"| Reproducibility and repeatability checks
+29| "provenance.py"| Extended provenance and processing traceability
+
+## 🔐 Protected Intelligence Core — Logical Component 30
+
+The protected intelligence core is counted as the 30th logical architectural component, but its proprietary implementation is not distributed in the public repository.
+
+Public Repository
+       │
+       ├── Input Adapters
+       ├── Unified Data + QC
+       ├── Engine Interface
+       ├── Public Analytics
+       ├── Visualization + Export
+       ├── Dashboard
+       └── Validation
+                │
+                ▼
+        blackbox_client.py
+        Public API Interface
+                │
+                ▼
+       🔐 Protected Intelligence Core
+       │
+       ├── Proprietary feature engines
+       ├── Experimental mathematical models
+       ├── Protected tensor operations
+       └── Private computational logic
+
+The protected core is architecturally decoupled from the public repository. Its implementation, internal formulations, private parameters, and proprietary computational logic are not exposed through the public source tree.
+
+## 📝 Note for Evaluators
+
+«To support efficient demonstration and protect proprietary research formulations, the public repository exposes the complete open interface, input adapters, data-engineering layers, public analytics pipelines, and validation framework. The platform architecture comprises 30 logical components, including the protected intelligence core, while the corresponding proprietary implementation is not distributed in the public repository.
+
+Computationally intensive experimental operations may run independently through the protected service interface represented by "blackbox_client.py". The public interface is designed to preserve documented input/output contracts, provenance, validation, and reproducibility of the accessible components without exposing proprietary core formulations.»
+
+## 🔄 Architectural Data Flow
+
+                 DATA SOURCES
+                      │
+        ┌─────────────┼─────────────┐
+        ▼             ▼             ▼
+      NASA        Biomedical       Live
+      Data        Research        Stream
+        │             │             │
+        └─────────────┼─────────────┘
+                      ▼
+              03_INPUT_ADAPTERS
+                      │
+                      ▼
+              04_UNIFIED_DATA
+                ┌─────┴─────┐
+                │           │
+          data_schema    qc_engine
+                │           │
+                └─────┬─────┘
+                      ▼
+             05_ENGINE_INTERFACE
+                ┌─────┴─────┐
+                │           │
+                ▼           ▼
+       🔐 Protected Core   🟨 Public Analytics
+                │           │
+                │      06_PUBLIC_ANALYTICS
+                │           │
+                └─────┬─────┘
+                      ▼
+              07_PUBLIC_OUTPUT
+                ┌─────┴─────┐
+                ▼           ▼
+          Visualization    Export
+                │
+                ▼
+             Dashboard
+                │
+        ┌───────┼────────┐
+        ▼       ▼        ▼
+      Space  Biomedical  Live
+                │
+                ▼
+          Human Review
+
+## 🛡️ Public / Protected Boundary
+
+Layer| Access| Primary Responsibility
+Input Adapters| Open| Data ingestion and normalization
+Unified Data + QC| Open| Schema, integrity, hashing, and quality control
+Engine Interface| Open| Public feature contracts and engine routing
+Public Analytics| Open| Inspectable analytical fallback
+Visualization / Export| Open| Result presentation and provenance export
+Dashboard| Open| Human-facing research interface
+Validation| Open| Diagnostic and reproducibility utilities
+"blackbox_client.py"| Open| Protected-service client interface
+Intelligence Core| Protected| Proprietary computational implementation
+
+This separation represents an architectural and intellectual-property boundary. It does not imply that the protected service is always deployed, independently audited, or scientifically validated.
+
+## 🧪 Claim and Result Boundary
+
+The platform maintains a distinction between:
+
+- C1 — Measured: directly observed or extracted from supplied data.
+- C2 — Computational: derived from the public or protected computational pipeline.
+- C3 — Hypothesis / Future Work: exploratory interpretation or proposed application.
+
+A computational anomaly score is therefore not automatically a physical discovery, medical diagnosis, or autonomous scientific conclusion.
+
+## 🚀 Hackathon Implementation Status
+
+The 21-component core constitutes the primary hackathon production-candidate implementation. The additional 8 validation components extend the system with deeper robustness, reproducibility, surrogate, and provenance testing.
+
+The 30th logical component, the protected intelligence core, remains outside the public source repository by design.
+
+All public components are intended to remain inspectable, testable, and integration-oriented while preserving the project's Open Interface — Closed Intelligence Core architecture.
 
 ## 📱 Edge / Mobile Research Development
 
@@ -299,6 +488,6 @@ See [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) for the complete acknowledgemen
 
 **NASA Space Apps Challenge 2026 — Independent Research Prototype**
 
-👽 🚀 🔬
+🌌 🚀 🔬
 
 </div>
