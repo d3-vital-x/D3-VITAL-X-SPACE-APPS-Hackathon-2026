@@ -272,12 +272,14 @@ D3-VITAL-X-TEST/
 🔐 Protected Intelligence Core                 # 30
    Private / non-public implementation
 
+```
 ## 🔢 Module Classification
 
 The platform is organized into 30 logical components.
 
 ## 🟦 Core / Hackathon Production Candidate — 21 Components
 
+```text
 No.| Component| Role
 01| "requirements.txt"| Project dependencies
 02| "config.py"| Configuration, API settings, themes, and global constants
@@ -301,10 +303,12 @@ No.| Component| Role
 20| "live_page.py"| Live / Demonstration dashboard mode
 21| "app.py"| Main Streamlit dashboard entry point
 
+```
 ## 🧪 Validation Extension — 8 Components
 
 The validation layer extends the 21-component core with additional research-validation utilities:
 
+```text
 No.| Component| Role
 22| "validation_runner.py"| Validation orchestration
 23| "bootstrap_report.py"| Bootstrap-based stability and uncertainty reporting
@@ -315,10 +319,12 @@ No.| Component| Role
 28| "reproducibility.py"| Reproducibility and repeatability checks
 29| "provenance.py"| Extended provenance and processing traceability
 
+```
 ## 🔐 Protected Intelligence Core — Logical Component 30
 
 The protected intelligence core is counted as the 30th logical architectural component, but its proprietary implementation is not distributed in the public repository.
 
+```text
 Public Repository
        │
        ├── Input Adapters
@@ -350,7 +356,7 @@ The protected core is architecturally decoupled from the public repository. Its 
 Computationally intensive experimental operations may run independently through the protected service interface represented by "blackbox_client.py". The public interface is designed to preserve documented input/output contracts, provenance, validation, and reproducibility of the accessible components without exposing proprietary core formulations.»
 
 ## 🔄 Architectural Data Flow
-
+```text
                  DATA SOURCES
                       │
         ┌─────────────┼─────────────┐
@@ -394,7 +400,7 @@ Computationally intensive experimental operations may run independently through 
                 │
                 ▼
           Human Review
-
+```
 ## 🛡️ Public / Protected Boundary
 
 Layer| Access| Primary Responsibility
