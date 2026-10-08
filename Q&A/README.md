@@ -145,11 +145,12 @@ Its outputs are intended to function as computational indicators and review flag
 
 ### C1 / C2 / C3 Claim Boundary
 
+```text
 Classification| Meaning
 C1| Directly measured / observed data
 C2| Computationally derived indicator
 C3| Exploratory interpretation or hypothesis
-
+```
 For example, an anomaly score does not by itself constitute a definitive diagnosis of a disease, spacecraft failure, or astrophysical phenomenon.
 
 ### Human-Centered Policy
