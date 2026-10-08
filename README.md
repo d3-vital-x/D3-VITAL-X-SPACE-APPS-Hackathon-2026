@@ -399,6 +399,14 @@ Computationally intensive experimental operations may run independently through 
                 ▼
           Human Review
 ```
+## ❓ System Architecture & FAQ
+
+For architecture, validation, data boundaries, claim classifications (C1/C2/C3), human-in-the-loop policies, and protected-core principles:
+
+👉 [Read the Full Architecture & FAQ](./Q%26A/README.md)
+
+«Technical reference: 10 core questions covering the platform’s architecture, validation framework, multimodal data handling, and research boundaries.»
+
 ## 🛡️ Public / Protected Boundary
 
 Layer| Access| Primary Responsibility
