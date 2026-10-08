@@ -252,6 +252,7 @@ A single anomaly score is not automatically treated as evidence of a scientifica
 
 For this reason, the validation extension layer includes multiple diagnostic components:
 
+```text
 08_VALIDATION/
 ├── validation_runner.py
 ├── bootstrap_report.py
@@ -261,7 +262,7 @@ For this reason, the validation extension layer includes multiple diagnostic com
 ├── time_reversal_test.py
 ├── reproducibility.py
 └── provenance.py
-
+```
 ### These components provide a framework for investigating questions such as:
 
 - Statistical stability
