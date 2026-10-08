@@ -320,6 +320,7 @@ The modular architecture is designed so that a new data source can be integrated
 
 ### Conceptually:
 
+```text
 New Data Source
       │
       ▼
@@ -339,7 +340,7 @@ Public Analytics
       │
       ▼
 Validation / Output
-
+```
 This separation keeps domain-specific ingestion logic distinct from downstream analysis components.
 
 However, adding a new domain does not automatically establish scientific validity.
