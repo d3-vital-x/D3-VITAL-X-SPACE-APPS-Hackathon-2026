@@ -70,13 +70,14 @@ can be ingested through the adapter layer.
 
 The relevant public components include:
 
+```text
 03_INPUT_ADAPTERS/
 ├── csv_adapter.py
 ├── image_adapter.py
 ├── nasa_adapter.py
 ├── dicom_adapter.py
 └── live_adapter.py
-
+```
 ### 🔹 Local Processing
 
 Following ingestion, schema validation, quality control, public analytics, validation, and visualization can be performed within a local computational environment.
@@ -115,8 +116,10 @@ The public repository exposes components including:
 
 The protected intelligence core is represented architecturally as:
 
+```text
 ### 🔐 Protected Intelligence Core
-Private / Non-Public
+### Private / Non-Public
+```
 
 It is not a public source-code module.
 
@@ -140,7 +143,7 @@ D³ VITAL-X is currently a research and signal-analysis platform, not a certifie
 
 Its outputs are intended to function as computational indicators and review flags, rather than final decisions.
 
-C1 / C2 / C3 Claim Boundary
+### C1 / C2 / C3 Claim Boundary
 
 Classification| Meaning
 C1| Directly measured / observed data
@@ -153,9 +156,9 @@ For example, an anomaly score does not by itself constitute a definitive diagnos
 
 Potentially significant outputs should therefore be interpreted as:
 
-«Needs Human Review»
+### «Needs Human Review»
 
-### or
+or
 
 «Structural / Statistical Change Indicator»
 
@@ -177,7 +180,7 @@ Original input data should remain identifiable and unmodified prior to analysis.
 
 The following component provides the public quality-control layer:
 
-04_UNIFIED_DATA/qc_engine.py
+### 04_UNIFIED_DATA/qc_engine.py
 
 ### 🔹 Provenance
 
@@ -380,13 +383,13 @@ Protected Architectural Component
 
 «30 logical architectural components»
 
-This consists of:
+### This consists of:
 
 «29 public source-level components + 1 protected / non-public intelligence component»
 
 ### Current Limitations
 
-D³ VITAL-X does not currently claim to be:
+### D³ VITAL-X does not currently claim to be:
 
 - NASA-certified spacecraft software
 - Clinical diagnostic software
@@ -414,11 +417,11 @@ which can then undergo appropriate validation and expert review.
 
 ### Therefore:
 
-«Detect → Validate → Explain → Review»
+### «Detect → Validate → Explain → Review»
 
 —not—
 
-«Detect → Automatically Decide»
+### «Detect → Automatically Decide»
 
 ---
 
