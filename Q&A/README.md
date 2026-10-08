@@ -9,21 +9,21 @@ D³ VITAL-X is presented as a research prototype and scientific signal-analysis 
 
 ---
 
-Q1: What is the core distinction of the D³ VITAL-X Space Intelligence Platform?
+## Q1: What is the core distinction of the D³ VITAL-X Space Intelligence Platform?
 
-Answer
+### Answer
 
 D³ VITAL-X is an Edge-First, Modular, Multimodal Signal Analysis Platform designed to bring heterogeneous scientific data into a common architecture for data ingestion, quality control, feature representation, analysis, validation, visualization, and provenance.
 
 Its principal characteristics include:
 
-🔹 Resource-Constrained / Edge-Oriented Design
+### 🔹 Resource-Constrained / Edge-Oriented Design
 
 The platform follows a modular architecture intended to support computationally constrained environments through lightweight, separable processing components.
 
 However, a specific RAM requirement or real-time performance level is not claimed as a universal guarantee. Actual resource consumption depends on hardware, dataset size, algorithm configuration, and workload.
 
-🔹 Multimodal Scientific Data
+### 🔹 Multimodal Scientific Data
 
 The architecture supports multiple input classes through dedicated adapters, including:
 
@@ -33,11 +33,11 @@ The architecture supports multiple input classes through dedicated adapters, inc
 - DICOM / biomedical imaging
 - Live or streaming-style inputs
 
-🔹 Mathematical & Signal Analysis
+###🔹 Mathematical & Signal Analysis
 
 The public analytics layer supports computational analysis involving quantities such as entropy, variance, coupling/transition indicators, and anomaly-oriented measurements.
 
-🔹 Unified Validation Architecture
+### 🔹 Unified Validation Architecture
 
 The intended workflow follows:
 
@@ -45,19 +45,19 @@ The intended workflow follows:
 
 This provides a structured foundation for reproducible scientific analysis.
 
-🔹 Human-in-the-Loop
+###🔹 Human-in-the-Loop
 
 Platform outputs are intended to function as computational indicators for human review, rather than autonomous medical, scientific, or mission-level decisions.
 
 ---
 
-Q2: How can D³ VITAL-X ingest and process data without continuous internet connectivity?
+## Q2: How can D³ VITAL-X ingest and process data without continuous internet connectivity?
 
-Answer
+### Answer
 
 D³ VITAL-X follows an Offline / Edge-First capable architecture in which continuous cloud connectivity is not inherently required for the core local processing workflow.
 
-🔹 Local File Ingestion
+### 🔹 Local File Ingestion
 
 Locally available scientific datasets such as:
 
@@ -77,11 +77,11 @@ The relevant public components include:
 ├── dicom_adapter.py
 └── live_adapter.py
 
-🔹 Local Processing
+### 🔹 Local Processing
 
 Following ingestion, schema validation, quality control, public analytics, validation, and visualization can be performed within a local computational environment.
 
-🔹 Important Architectural Boundary
+### 🔹 Important Architectural Boundary
 
 The current prototype is not claimed to be certified spacecraft onboard software.
 
@@ -89,15 +89,15 @@ Rather, its architecture is designed to support local and edge-oriented workflow
 
 ---
 
-Q3: Why is the proprietary intelligence core not included in the public GitHub repository?
+## Q3: Why is the proprietary intelligence core not included in the public GitHub repository?
 
-Answer
+### Answer
 
 D³ VITAL-X follows an “Open Interface — Closed Intelligence Core” architectural principle.
 
 The public repository exposes inspectable research infrastructure and documented interfaces, while experimental or proprietary mathematical formulations and private feature-engineering logic are intentionally not distributed as public source code.
 
-Public Layer
+### Public Layer
 
 The public repository exposes components including:
 
@@ -111,11 +111,11 @@ The public repository exposes components including:
 - Export
 - Provenance
 
-Protected Layer
+### Protected Layer
 
 The protected intelligence core is represented architecturally as:
 
-🔐 Protected Intelligence Core
+### 🔐 Protected Intelligence Core
 Private / Non-Public
 
 It is not a public source-code module.
@@ -130,9 +130,9 @@ The objective is to maintain inspectable public contracts and reproducible infra
 
 ---
 
-Q4: Does D³ VITAL-X provide automated medical diagnoses or autonomous flight-control decisions?
+## Q4: Does D³ VITAL-X provide automated medical diagnoses or autonomous flight-control decisions?
 
-Answer
+### Answer
 
 No.
 
@@ -149,13 +149,13 @@ C3| Exploratory interpretation or hypothesis
 
 For example, an anomaly score does not by itself constitute a definitive diagnosis of a disease, spacecraft failure, or astrophysical phenomenon.
 
-Human-Centered Policy
+### Human-Centered Policy
 
 Potentially significant outputs should therefore be interpreted as:
 
 «Needs Human Review»
 
-or
+### or
 
 «Structural / Statistical Change Indicator»
 
@@ -163,43 +163,43 @@ Scientific, medical, and mission-level decisions remain the responsibility of qu
 
 ---
 
-Q5: How does D³ VITAL-X protect raw data integrity and provenance?
+## Q5: How does D³ VITAL-X protect raw data integrity and provenance?
 
-Answer
+### Answer
 
 The platform architecture follows an Immutable Raw-Input Policy together with provenance-aware processing.
 
-🔹 Raw Data Preservation
+### 🔹 Raw Data Preservation
 
 Original input data should remain identifiable and unmodified prior to analysis. The workflow is designed to avoid undocumented transformations, arbitrary smoothing, or hidden alteration of the raw input.
 
-🔹 Quality Control
+### 🔹 Quality Control
 
 The following component provides the public quality-control layer:
 
 04_UNIFIED_DATA/qc_engine.py
 
-🔹 Provenance
+### 🔹 Provenance
 
 The following validation component forms part of the provenance architecture:
 
-08_VALIDATION/provenance.py
+### 08_VALIDATION/provenance.py
 
 It is intended to track relevant source, processing context, and reproducibility metadata.
 
-🔹 Cryptographic Integrity
+### 🔹 Cryptographic Integrity
 
 Where cryptographic hashing is enabled in the implementation, a fingerprint such as SHA-256 can be used to verify raw-file identity and detect subsequent file changes.
 
-This distinction is important:
+### This distinction is important:
 
 «A cryptographic hash verifies file identity/integrity; it does not establish that a scientific interpretation is correct.»
 
 ---
 
-Q6: How can one platform handle both space-science and biomedical data?
+## Q6: How can one platform handle both space-science and biomedical data?
 
-Answer
+### Answer
 
 A central architectural principle of D³ VITAL-X is:
 
@@ -207,7 +207,7 @@ A central architectural principle of D³ VITAL-X is:
 
 Different data domains enter the platform through dedicated adapters and are then mapped into a common processing architecture.
 
-For example:
+### For example:
 
 NASA / Space Data
        │
@@ -229,11 +229,11 @@ Biomedical Data
 
 The same architectural pattern can therefore support multiple input formats while preserving domain-specific ingestion logic.
 
-Important Boundary
+### Important Boundary
 
 A common processing architecture does not imply that space-science and biomedical data have identical scientific meaning.
 
-The intended principle is:
+### The intended principle is:
 
 «One signal-analysis architecture, multiple domain-specific interpretations.»
 
@@ -241,9 +241,9 @@ Each domain still requires appropriate scientific assumptions, validation proced
 
 ---
 
-Q7: How does D³ VITAL-X evaluate whether an observed anomaly is robust?
+## Q7: How does D³ VITAL-X evaluate whether an observed anomaly is robust?
 
-Answer
+### Answer
 
 A single anomaly score is not automatically treated as evidence of a scientifically meaningful phenomenon.
 
@@ -259,7 +259,7 @@ For this reason, the validation extension layer includes multiple diagnostic com
 ├── reproducibility.py
 └── provenance.py
 
-These components provide a framework for investigating questions such as:
+### These components provide a framework for investigating questions such as:
 
 - Statistical stability
 - Bootstrap uncertainty
@@ -270,19 +270,19 @@ These components provide a framework for investigating questions such as:
 - Reproducibility
 - Provenance
 
-Interpretation Principle
+### Interpretation Principle
 
 If an anomaly indicator is unstable across appropriate validation tests, it should not be presented as strong evidence.
 
-Therefore:
+### Therefore:
 
 «An anomaly flag is a starting point for investigation, not proof of a phenomenon.»
 
 ---
 
-Q8: Can D³ VITAL-X run on resource-constrained devices such as ordinary computers or mobile/edge hardware?
+## Q8: Can D³ VITAL-X run on resource-constrained devices such as ordinary computers or mobile/edge hardware?
 
-Answer
+### Answer
 
 D³ VITAL-X follows a resource-conscious, modular, and edge-oriented architecture intended to make deployment on constrained computing environments more practical.
 
@@ -298,7 +298,7 @@ Instead of requiring one monolithic computational workflow, the system separates
 
 This modularity allows a deployment to execute only the components required for a particular workflow.
 
-However:
+### However:
 
 «“Designed for constrained environments” does not mean “guaranteed to run smoothly on every 4–5 GB device.”»
 
@@ -308,13 +308,13 @@ Accordingly, hardware-specific performance claims should be established through 
 
 ---
 
-Q9: What happens when D³ VITAL-X receives a dataset from a new scientific domain or file format?
+## Q9: What happens when D³ VITAL-X receives a dataset from a new scientific domain or file format?
 
-Answer
+### Answer
 
 The modular architecture is designed so that a new data source can be integrated through an appropriate adapter without requiring the entire platform to be redesigned.
 
-Conceptually:
+### Conceptually:
 
 New Data Source
       │
@@ -340,7 +340,7 @@ This separation keeps domain-specific ingestion logic distinct from downstream a
 
 However, adding a new domain does not automatically establish scientific validity.
 
-A new dataset or domain requires appropriate:
+### A new dataset or domain requires appropriate:
 
 - Schema validation
 - Domain-specific quality control
@@ -350,19 +350,19 @@ A new dataset or domain requires appropriate:
 - Provenance
 - Human scientific review
 
-Therefore:
+### Therefore:
 
 «Modular interoperability does not replace domain validation.»
 
 ---
 
-Q10: What is the current status of D³ VITAL-X, and what are its principal limitations?
+## Q10: What is the current status of D³ VITAL-X, and what are its principal limitations?
 
-Answer
+### Answer
 
 D³ VITAL-X is currently presented as a research prototype and hackathon-oriented scientific software architecture.
 
-The current public architecture contains:
+### The current public architecture contains:
 
 Core / Hackathon Production Candidate
 
@@ -376,7 +376,7 @@ Protected Architectural Component
 
 + 1 protected intelligence core
 
-Therefore:
+### Therefore:
 
 «30 logical architectural components»
 
@@ -384,7 +384,7 @@ This consists of:
 
 «29 public source-level components + 1 protected / non-public intelligence component»
 
-Current Limitations
+### Current Limitations
 
 D³ VITAL-X does not currently claim to be:
 
@@ -395,11 +395,11 @@ D³ VITAL-X does not currently claim to be:
 - A guaranteed real-time system for every hardware configuration
 - A replacement for qualified domain experts
 
-Instead, its primary workflow is:
+### Instead, its primary workflow is:
 
 «Multimodal Data → Unified Processing → Signal Analysis → Validation → Interpretable Research Indicators → Human Review»
 
-Research Philosophy
+### Research Philosophy
 
 The objective is not to automatically produce definitive scientific, medical, or mission-level conclusions.
 
@@ -412,7 +412,7 @@ The platform is intended to provide reproducible computational tools that can he
 
 which can then undergo appropriate validation and expert review.
 
-Therefore:
+### Therefore:
 
 «Detect → Validate → Explain → Review»
 
@@ -422,13 +422,13 @@ Therefore:
 
 ---
 
-🧭 One-Line Architectural Summary
+## 🧭 One-Line Architectural Summary
 
 D³ VITAL-X is an Edge-First, Multimodal, Human-in-the-Loop Scientific Signal Analysis Platform designed to transform heterogeneous data into validated computational indicators while maintaining a clear boundary between public interfaces and protected research intelligence.
 
 ---
 
-📌 Evaluator Note
+## 📌 Evaluator Note
 
 The public repository exposes the documented interfaces, input adapters, unified data layer, public analytics, validation framework, visualization/output components, and reproducibility infrastructure.
 
@@ -436,8 +436,8 @@ The architecture comprises 30 logical components: 29 public source-level compone
 
 The protected component is intentionally excluded from the public repository under the project's:
 
-«Open Interface — Closed Intelligence Core»
+### «Open Interface — Closed Intelligence Core»
 
-principle.
+### principle.
 
 The public architecture therefore provides an inspectable software boundary without representing the protected research core as publicly distributed source code.
