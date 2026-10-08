@@ -212,6 +212,7 @@ Different data domains enter the platform through dedicated adapters and are the
 
 ### For example:
 
+```text
 NASA / Space Data
        │
        ▼
@@ -229,6 +230,7 @@ dicom_adapter.py
        ▲
        │
 Biomedical Data
+```
 
 The same architectural pattern can therefore support multiple input formats while preserving domain-specific ingestion logic.
 
